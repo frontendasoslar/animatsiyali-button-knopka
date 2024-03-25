@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #333;
+}
+
+/* Button knopkasining klaslari */
+.button {
+  /* Bola elementlar otasiga nisbatan joylashishi uchun */
+ position: relative;
+ /* Buttun knopkasi link bo'lganligi uchun */
+ display: inline-block;
+ /* Button knopkasi matni rangi */
+ color: #2196f3;
+ /* hamma harflar katta harf bo'lishi uchun */
+ text-transform: uppercase;
+ /* Matn tagidagi chiziqni olib tashlash uchun */
+ text-decoration: none;
+ /* Shrift olchami */
+ font-size: 24px;
+ /* Harflar orasidagi masofa */
+ letter-spacing: 4px;
+ /* Knopkaning bola elementlari knopka o'chamidan chiqib keta olmaydi */
+ overflow: hidden;
+ /* Button knopkasi holatini o'zgartirishi uchun ketadigan vaqt */
+ transition: 0.3s;
+ padding: 5px 10px;
+}
+
+/* Button knopkasi tomonlari uchun umumiy klaslar*/
+.button-line {
+  /* Button knopkasiga nisbatab joylashishi uchun */
+  position: absolute;
+  display: block;
+}
+
+/* Button knopkasi tepa qismi chizig'i uchun klaslar */
+.button-line-top {
+  /* Tepaga taqalib turadi */
+  top: 0;
+  /* Chiziq chap tomonga o'zining o'lchamicha suruladi */
+  left: -100%;
+  /* Chiziqning eni va bo'yi */
+  width: 100%;
+  height: 2px;
+  /* Chiziq rangi gradientda */
+  background:linear-gradient(90deg, transparent, #2196f3);
+}
+
+/* Button knopkasi hover bo'lganda tepa qismi chizig'ning holat o'zgarishi */
+.button:hover .button-line-top {
+  /* Chiziq chap tomondan o'zining o'lchamicha suruladi */
+  left: 100%;
+  /* Chiziq holatinio'zgartirishi uchun ketadigan vaqt */
+  transition: 1s;
+  transition-delay: 0.35s;
+}
+
+/* Button knopkasi pastki qismi chizig'i uchun klaslar */
+.button-line-bottom {
+  /* Pastga taqalib turadi */
+  bottom: 0;
+  /* Chiziq o'ng tomonga o'zining o'lchamicha suruladi */
+  right: -100%;
+  /* Chiziqning eni va bo'yi */
+  width: 100%;
+  height: 2px;
+  /* Chiziq rangi gradientda */
+  background:linear-gradient(90deg, transparent, #2196f3);
+}
+
+/* Button knopkasi hover bo'lganda pastgi qismi chizig'ning holat o'zgarishi */
+.button:hover .button-line-bottom {
+  /* Chiziq o'ng tomondan o'zining o'lchamicha suruladi */
+  right: 100%;
+  /* Chiziq holatinio'zgartirishi uchun ketadigan vaqt */
+  transition: 1s;
+  transition-delay: 0.35s;
+}
+
+/* Button knopkasi chap qismi chizig'i uchun klaslar */
+.button-line-left {
+  /* Chapga taqalib turadi */
+  left: 0;
+  /* Chiziq pastgi tomonga o'zining o'lchamicha suruladi */
+  bottom: -100%;
+ /* Chiziqning eni va bo'yi */
+  width: 2px;
+  height: 100%;
+  /* Chiziq rangi gradientda */
+  background:linear-gradient(0deg, transparent, #2196f3);
+}
+
+/* Qolgan tomonlarda ham shu ketma ketlik faqt tomonga qarab o'zgaradi */
+.button:hover .button-line-left {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.35s;
+}
+
+
+.button-line-right {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background:linear-gradient(0deg, transparent, #2196f3);
+}
+
+.button:hover .button-line-right {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.35s;
+}
+
+/* Button knopkasining hover holatida */
+.button:hover{
+  /* Knopka soyasi */
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  /* Knopka rangi */
+  background-color: #2196f3;
+  /* Matn rangi */
+  color: #333;
+  /* Buttonning holatini o'zgartirishi uchun ketadigan vaqt */
+  transition: 1s;
+  transition-delay: 1s;
+}
